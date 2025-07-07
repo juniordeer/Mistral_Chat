@@ -14,6 +14,6 @@ Ist ein einfach Mistral Web client
 
 3. Öffnen Sie die index.html im Browser.
 
-4. Bearbeiten sie denn code😊
+4. Und bearbeiten sie denn code😊
 
 
