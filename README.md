@@ -1,7 +1,7 @@
 
 # Mistral Chat
 
-Ist ein einfach M
+Ist ein einfach Mistral Web client
 
 ## Installation
 
