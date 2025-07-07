@@ -1,14 +1,7 @@
+🧠 Mistral Chat UI (Frontend-Only Demo)
 
-```markdown
-# 🧠 Mistral Chat UI (Frontend-Only Demo)
-
-Dieses kleine Projekt ermöglicht dir, über eine einfache Weboberfläche Fragen an **Mistral AI** zu stellen und die Antwort direkt im Browser zu erhalten – ohne Verlauf und mit reiner Einzelfrage.
-
----
-
-## 📂 Projektstruktur
-
-```
+Dieses kleine Projekt ermöglicht dir, über eine einfache Weboberfläche Fragen an Mistral AI zu stellen und die Antwort direkt im Browser zu erhalten – ohne Verlauf und mit reiner Einzelfrage.
+📂 Projektstruktur
 
 /mistral-chat/
 ├── index.html        # HTML-Struktur
@@ -17,66 +10,56 @@ Dieses kleine Projekt ermöglicht dir, über eine einfache Weboberfläche Fragen
 ├── api-key.txt       # Dein privater Mistral API Key
 └── README.md         # Projektbeschreibung
 
-````
+🔧 Voraussetzungen
 
----
+    API-Key von Mistral AI
 
-## 🔧 Voraussetzungen
+        Hol ihn dir über: https://console.mistral.ai
 
-1. **API-Key von Mistral AI**
-   - Hol ihn dir über: [https://console.mistral.ai](https://console.mistral.ai)
-   - Speichere ihn in die Datei `api-key.txt` (nicht in den Code direkt schreiben!)
+        Speichere ihn in die Datei api-key.txt (nicht in den Code direkt schreiben!)
 
-   ```txt
-   sk-your-mistral-api-key-here
-````
+    Inhalt von api-key.txt:
 
-2. **Lokalen Webserver starten**
+sk-your-mistral-api-key-here
 
-   > Der Browser blockiert lokale Datei-Lesezugriffe (`fetch('api-key.txt')`), daher ist ein Webserver nötig.
+Lokalen Webserver starten
 
-   **Python Beispiel:**
+    Der Browser blockiert lokale Datei-Lesezugriffe (fetch('api-key.txt')), daher ist ein Webserver nötig.
 
-   ```bash
-   python -m http.server 5500
-   ```
+Python (schnell & einfach):
 
-   Danach öffnest du im Browser:
-   👉 [http://localhost:5500](http://localhost:5500)
+    python -m http.server 5500
 
----
+    Danach öffne im Browser:
+    👉 http://localhost:5500
 
-## ✨ Nutzung
+✨ Nutzung
 
-1. Öffne die Seite lokal im Browser (`localhost:5500`)
-2. Gib deine Frage im Eingabefeld ein
-3. Drücke `Enter` – Mistral AI liefert dir die Antwort
+    Öffne http://localhost:5500 im Browser
 
----
+    Gib deine Frage im Eingabefeld ein
 
-## ⚠️ Hinweise
+    Drücke Enter – Mistral AI liefert dir die Antwort direkt im Chatfenster
 
-* **Sicherheit**: Im echten Einsatz darf der API-Key **niemals direkt im Frontend** erscheinen.
+⚠️ Sicherheitshinweis
 
-  * Verwende ein Backend, um den Key zu schützen.
-* Dieses Projekt dient zu **Demo- und Entwicklungszwecken**.
+    Der API-Key darf nicht im Frontend verwendet werden!
 
----
+    Für produktive Nutzung solltest du ein Node.js oder Python Backend verwenden, das den Key sicher verwaltet.
 
-## 💡 Nächste Schritte (optional)
+    Dieses Projekt dient zu Demo- und Entwicklungszwecken.
 
-* Verlauf integrieren
-* Multiple Modelle wählbar machen
-* Node.js Backend zur Key-Verwaltung
-* Deployment (Netlify, Vercel, etc.)
+💡 Erweiterungsideen
 
----
+    Chatverlauf anzeigen
 
-Viel Spaß beim Chatten mit Mistral! 🤖💬
-Bei Fragen → [openai.com](https://www.openai.com) oder [mistral.ai](https://mistral.ai) anschauen.
+    Auswahl zwischen mehreren Mistral-Modellen
 
-```
+    Node.js-Backend zur sicheren Key-Nutzung
 
-✅ Du kannst diesen Inhalt einfach als `README.md` speichern!  
-Wenn du magst, generiere ich dir auch direkt ein komplettes GitHub-Projekt mit `.gitignore`, `package.json` etc. Sag nur Bescheid 😎📦
-```
+    Deployment auf Netlify/Vercel
+
+    Ladeanzeige, Markdown-Rendering, etc.
+
+Viel Spaß beim Coden & Fragenstellen!
+Made with ☕ + 🤖 using Mistral AI
