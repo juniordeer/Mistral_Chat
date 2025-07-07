@@ -1,25 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const keyInput = document.getElementById('apiKeyInput');
+  const saveBtn = document.getElementById('saveKeyBtn');
   const input = document.getElementById('userInput');
   const responseDiv = document.getElementById('response');
+  const keySection = document.getElementById('key-section');
+  const chatSection = document.getElementById('chat-section');
 
-  let mistralApiKey = "";
+  // 1. Check ob API-Key im localStorage ist
+  const savedKey = localStorage.getItem('mistral_api_key');
+  if (savedKey) {
+    keySection.style.display = 'none';
+    chatSection.style.display = 'flex';
+  }
 
-  // 1. Lade den API-Key aus api-key.txt (funktioniert nur über lokalen Server)
-  fetch('api-key.txt')
-    .then(res => res.text())
-    .then(key => {
-      mistralApiKey = key.trim();
-    })
-    .catch(err => {
-      console.error("API Key konnte nicht geladen werden", err);
-      responseDiv.textContent = "API-Key Fehler ⚠️";
-    });
+  // 2. API-Key speichern
+  saveBtn.addEventListener('click', () => {
+    const key = keyInput.value.trim();
+    if (key) {
+      localStorage.setItem('mistral_api_key', key);
+      keySection.style.display = 'none';
+      chatSection.style.display = 'flex';
+    }
+  });
 
-  // 2. Wenn Enter gedrückt → Anfrage an Mistral senden
+  // 3. Anfrage an Mistral senden
   input.addEventListener('keypress', async function (e) {
     if (e.key === 'Enter') {
       const prompt = input.value.trim();
-      if (!prompt || mistralApiKey === '') return;
+      const apiKey = localStorage.getItem('mistral_api_key');
+      if (!prompt || !apiKey) return;
 
       responseDiv.textContent = "Antwort wird geladen... 🔄";
 
@@ -28,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${mistralApiKey}`
+            "Authorization": `Bearer ${apiKey}`
           },
           body: JSON.stringify({
             model: "mistral-tiny",
