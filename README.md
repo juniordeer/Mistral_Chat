@@ -1,4 +1,4 @@
-Kopieren
+
 # Mistral Chat
 
 Ein einfacher Web-Chat.
@@ -8,13 +8,10 @@ Ein einfacher Web-Chat.
 1. Klonen:
    ```bash
    git clone https://github.com/juniordeer/Mistral_Chat.git
-2. Wechseln:
+2. Verzeichnes wechseln:
    ```bash
    cd Mistral_Chat
-Öffnen Sie index.html im Browser.
-Dateien
-Datei	Beschreibung
-index.html	HTML-Datei
-style.css	CSS-Datei
-script.js	JavaScript-Datei
-api-key.txt	API-Schlüssel
+3. Öffnen Sie index.html im Browser.
+4. Bearbeiten sie denn code😊
+
+
