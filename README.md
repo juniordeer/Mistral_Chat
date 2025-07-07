@@ -13,7 +13,7 @@ Ist ein einfach Mistral Web client
    cd Mistral_Chat
 3. Holen sie sich ein api-key von console.mistral.ai und tragen sie in ihn die api-key.txt ein
 
-5. Öffnen Sie index.html im Browser.
+5. Öffnen Sie die index.html im Browser.
 
 7. Bearbeiten sie denn code😊
 
