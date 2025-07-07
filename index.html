@@ -8,9 +8,19 @@
 <body>
   <div class="chat-box">
     <h2>Frage Mistral</h2>
-    <div class="input-bar">
+
+    <!-- Eingabe für API Key -->
+    <div id="key-section" class="input-bar">
+      <input type="password" id="apiKeyInput" placeholder="Dein Mistral API Key">
+      <button id="saveKeyBtn">Speichern</button>
+    </div>
+
+    <!-- Chat-Eingabe -->
+    <div class="input-bar" id="chat-section" style="display:none;">
       <input type="text" id="userInput" placeholder="Was möchtest du fragen?" />
     </div>
+
+    <!-- Antwort -->
     <div class="response" id="response"></div>
   </div>
 
