@@ -12,7 +12,9 @@ Ist ein einfach M
    ```bash
    cd Mistral_Chat
 3. Holen sie sich ein api-key von console.mistral.ai und tragen sie in in die api-key.txt rein
-4. Öffnen Sie index.html im Browser.
-5. Bearbeiten sie denn code😊
+
+5. Öffnen Sie index.html im Browser.
+
+7. Bearbeiten sie denn code😊
 
 
